@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay, faRefresh, faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faRefresh, faArrowRight, faArrowLeft, faPause } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
 	const [t, setT] = useState(0);
@@ -62,8 +62,9 @@ const Home = () => {
 
 	return (
 		<div className="bg-black p-4 h-screen text-white text-center">
-			<div className="grid grid-cols-6">
-				<button className="bg-gray-700 py-2 px-3 mx-5 rounded-lg hover:bg-gray-900 col-start-3" onClick={handlePlay}>Play <FontAwesomeIcon icon={faPlay} style={{"padding": "0 0.5vw 0 0.5vw"}}/></button>
+			<div className="grid grid-cols-9">
+				<button className="bg-gray-700 py-2 px-3 mx-5 rounded-lg hover:bg-gray-900 col-start-4" onClick={handlePlay}>Play <FontAwesomeIcon icon={faPlay} style={{"padding": "0 0.5vw 0 0.5vw"}}/></button>
+				<button className="bg-gray-700 py-2 px-3 mx-5 rounded-lg hover:bg-gray-900" onClick={handlePause}>Pause <FontAwesomeIcon icon={faPause} style={{"padding": "0 0.5vw 0 0.5vw"}}/></button>
 				<button className="bg-gray-700 py-2 px-3 mx-5 rounded-lg hover:bg-gray-900" onClick={handleRestart}>Restart <FontAwesomeIcon icon={faArrowLeft} style={{"padding": "0 0.5vw 0 0.5vw"}}/></button>
 			</div>
 			<video id="video" src="/video.mp4" ref={videoRef} type="video/mp4" onEnded={() => handleSetEnded}className="mx-auto h-4/5" />
