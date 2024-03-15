@@ -50,11 +50,11 @@ const Background = () => {
             <audio src="car_audio.mp3" type="audio/mpeg" ref={carRef}/>
             <div className="grid grid-cols-9 gap-1 text-left pt-2">
                 <label className="col-start-4"><FontAwesomeIcon icon={faVolumeHigh} style={{"padding": "0 0.5vw 0 0.5vw"}}/> Vocal Volume: </label>
-                <input className="col-span-2" type="range" id="vocalSlider" name="Vocals" min="0" max="100" value={vocalVolume} onChange={(e) => setVocalVolume(e.target.value)}/>
+                <input className="col-span-2 mr-1" type="range" id="vocalSlider" name="Vocals" min="0" max="100" value={vocalVolume} onChange={(e) => setVocalVolume(e.target.value)}/>{vocalVolume}%
             </div>
             <div className="grid grid-cols-9 gap-1 text-left py-2">
                 <label className="col-start-4"><FontAwesomeIcon icon={faVolumeHigh} style={{"padding": "0 0.5vw 0 0.5vw"}}/>Background Volume: </label>
-                <input className="col-span-2" type="range" id="backgroundSlider" name="Background" min="0" max="100" value={backgroundVolume*5} onChange={(e) => setBackgroundVolume(e.target.value/5)}/>
+                <input className="col-span-2 mr-1" type="range" id="backgroundSlider" name="Background" min="0" max="100" value={backgroundVolume*5} onChange={(e) => setBackgroundVolume(e.target.value/5)}/>{backgroundVolume*5}%
             </div>
 		</div>
     )
