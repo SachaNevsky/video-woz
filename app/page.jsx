@@ -11,10 +11,6 @@ const Home = () => {
 
 	const videoRef = useRef(null);
 
-	const handleSetEnded = () => {
-		setEnded(true);
-	}
-
 	const handlePlay = () => {
 		videoRef.current.play();
 	}
@@ -67,7 +63,7 @@ const Home = () => {
 				<button className="bg-gray-700 py-2 px-3 mx-5 rounded-lg hover:bg-gray-900" onClick={handlePause}>Pause <FontAwesomeIcon icon={faPause} style={{"padding": "0 0.5vw 0 0.5vw"}}/></button>
 				<button className="bg-gray-700 py-2 px-3 mx-5 rounded-lg hover:bg-gray-900" onClick={handleRestart}>Restart <FontAwesomeIcon icon={faArrowLeft} style={{"padding": "0 0.5vw 0 0.5vw"}}/></button>
 			</div>
-			<video id="video" src="/video.mp4" ref={videoRef} type="video/mp4" onEnded={() => handleSetEnded}className="mx-auto h-4/5" />
+			<video id="video" src="/video.mp4" ref={videoRef} type="video/mp4" className="mx-auto h-4/5" />
 			<div className="pb-5 grid grid-cols-6">
 				<button className="bg-gray-700 py-2 px-3 mx-5 rounded-lg hover:bg-gray-900 col-start-3" onClick={handleNext}>Next <FontAwesomeIcon icon={faArrowRight} style={{"padding": "0 0.5vw 0 0.5vw"}}/></button>
 				<button className="bg-gray-700 py-2 px-3 mx-5 rounded-lg hover:bg-gray-900" onClick={handleRePlay}>RePlay <FontAwesomeIcon icon={faRefresh} style={{"padding": "0 0.5vw 0 0.5vw"}}/></button>
