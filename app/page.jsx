@@ -61,7 +61,7 @@ const Home = () => {
 	}, [setT, setIndex, index]);
 
 	return (
-		<div className="bg-black p-4 h-screen text-white text-center">
+		<div className="bg-black p-4 h-[96vh] text-white text-center">
 			<div className="grid grid-cols-9">
 				<button className="bg-gray-700 py-2 px-3 mx-5 rounded-lg hover:bg-gray-900 col-start-4" onClick={handlePlay}>Play <FontAwesomeIcon icon={faPlay} style={{"padding": "0 0.5vw 0 0.5vw"}}/></button>
 				<button className="bg-gray-700 py-2 px-3 mx-5 rounded-lg hover:bg-gray-900" onClick={handlePause}>Pause <FontAwesomeIcon icon={faPause} style={{"padding": "0 0.5vw 0 0.5vw"}}/></button>
