@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay, faArrowLeft, faPause, faVolumeControlPhone, faVolumeHigh} from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faArrowLeft, faPause, faVolumeHigh} from "@fortawesome/free-solid-svg-icons";
 
 const Background = () => {
 
