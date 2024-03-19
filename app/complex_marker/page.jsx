@@ -1,12 +1,10 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay, faRefresh, faArrowRight, faArrowLeft, faPause } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faArrowLeft, faPause } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
-	const [index, setIndex] = useState(1);
-
 	const videoRef = useRef(null);
 
 	const handlePlay = () => {

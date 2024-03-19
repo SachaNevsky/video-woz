@@ -27,7 +27,7 @@ const Home = () => {
 				<button className="bg-gray-700 py-2 px-3 mx-5 rounded-lg hover:bg-gray-900" onClick={handlePause}>Pause <FontAwesomeIcon icon={faPause} style={{"padding": "0 0.5vw 0 0.5vw"}}/></button>
 				<button className="bg-gray-700 py-2 px-3 mx-5 rounded-lg hover:bg-gray-900" onClick={handleRestart}>Restart <FontAwesomeIcon icon={faArrowLeft} style={{"padding": "0 0.5vw 0 0.5vw"}}/></button>
 			</div>
-			<video id="video" src="/highlight.mp4" ref={videoRef} type="video/mp4" onEnded={() => handleSetEnded}className="mx-auto h-4/5" />
+			<video id="video" src="/highlight.mp4" ref={videoRef} type="video/mp4" className="mx-auto h-5/6" />
 		</div>
 	);
 }
